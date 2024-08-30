@@ -1,38 +1,56 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "@cloudscape-design/global-styles/index.css";
+import { Profile } from "./Profile";
 import "./App.css";
-import Button from "@cloudscape-design/components/button";
 
 function App() {
-  const [count, setCount] = useState(0);
+
+  const sites = [
+    {
+      name: "Apple Music",
+      icon: "/apple-music.svg",
+    },
+    {
+      name: "bandcamp",
+      icon: "/bandcamp.svg",
+    },
+    {
+      name: "bandsintown",
+      icon: "/bandsintown.svg",
+    },
+    {
+      name: "Instagram",
+      icon: "/instagram.svg",
+    },
+    {
+      name: "SoundCloud",
+      icon: "/soundcloud.svg",
+    },
+    {
+      name: "Spotify",
+      icon: "/spotify.svg",
+    },
+    {
+      name: "TIDAL",
+      icon: "/tidal.svg",
+    },
+    {
+      name: "YouTube",
+      icon: "/youtube.svg",
+    },
+  ]
+
 
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <Profile
+          name="Oak Chantosa"
+          title="Senior Software Engineer with Hinge Health"
+          location="Seattle, WA"
+          imageUrl="/oak-profile.jpeg"
+          sites={sites}
+        />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <Button
-          variant="primary"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          count is {count}
-        </Button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   );
 }
