@@ -8,7 +8,7 @@ interface ProfileProps {
   title: string;
   location: string;
   imageUrl: string;
-  sites: [];
+  sites: { name: string; icon: string }[];
 }
 
 const Profile: React.FC<ProfileProps> = ({
